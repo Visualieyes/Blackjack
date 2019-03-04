@@ -1,7 +1,5 @@
 /*
 Code Author: Keyann Al-Kheder
-Class: Comp 120
-Assignment: 2
 */
 
 
@@ -16,18 +14,12 @@ void shuffleDeck(char[]);
 int StartGame();
 
 
-
-
-
-//
-
 #define DECK_SIZE 52
 #define STARTINGPOT 10
 #define QUIT  0
 #define INITIALIZE_DECK 1
 #define SHUFFLE_DECK 2
 #define HITME 'Y'
-
 
 
 
@@ -42,7 +34,7 @@ int StartGame();
 int main()
 {
 
-	bool gameOn = false;
+    bool gameOn = false;
     char start;
     int initializeGame;			/* store choice for which function to test */
 
@@ -54,7 +46,7 @@ int main()
 
 
 
-	printf( "BLACKJACK !! \n"); /*display start screen*/
+    printf( "BLACKJACK !! \n"); /*display start screen*/
     printf("The rules are simple. You're goal is to reach 21. You start with two cards, and you can keep adding cards until they sum to 21\n You say 'Hit Me' to receive a new card. If you go over you lose. The closest to 21 wins. \n\n");
     printf("_________________________________________________________\n");
     printf("Would you like to play?: 'y/'n' ");
