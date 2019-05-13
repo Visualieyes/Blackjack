@@ -1,0 +1,162 @@
+/*
+   Author:  Comp120
+   Date: September, 2016
+   File: testdriver_lab6.c
+   Compiler Version: Code::Blocks
+
+   ------------------------------------------------------
+   Comp120 -- Lab 6
+   Test driver program for functions developed in part C lab 6
+
+   -------------------------------------------------------
+*/
+
+
+/*
+ *   For each new function, you'll need to add
+ *
+ *   (1) a function prototype in the prototype section
+ *   (2) a new constant in the constant section
+ *   (3) a new case in the main function - call the function to test
+ *   (4) a print statement in function GetTestChoice to display new menu choice
+ *   (5) a function definition at the bottom of this program
+ *
+ *	 The first function to test is IsTriangle, steps 1-5 have been mostly completed for this function
+ *   for you already, you only need to alter the function body of IsTriangle and to make a proper call
+ *   in main to make it work correctly.
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* function prototypes */
+void clean (void);
+int GetTestChoice();			/* 'menu' function of test driver */
+
+
+/* step (1) ADD: a prototype below for each new function you add to the test driver.
+   template:   type FunctionName(parameter types);
+*/
+
+
+
+
+#define DECK_SIZE 53
+
+/* case constants representing functions tested by this driver. */
+#define QUIT  0
+#define INITIALIZE_DECK 1
+#define SHUFFLE_DECK 2
+
+
+
+
+/* step (2) ADD: a new constant below for each new function you add to the test driver.
+   constant names are used in main and in GetTestChoice function below.
+*/
+
+
+/*********************************************************************
+ * main()
+ *		Allows user to test each function independently.
+ *		User can choose which function they wish to test, enter parameter
+ *		values for that function, and see the function results.
+ *********************************************************************/
+
+int main()
+{
+
+	int choice;			/* store choice for which function to test */
+
+	printf( "*** Test driver for lab 6. *** \n\n");
+
+	do
+	{
+		choice = GetTestChoice();
+
+		switch (choice)
+		{
+            case INITIALIZE_DECK:  /*test InitializeDeck function, add fucnhtion call below*/
+
+
+
+                break;
+
+            case SHUFFLE_DECK:   /*test ShuffleDeck function, add function call below*/
+
+                break;
+
+            /*add more test cases here*/
+
+
+		}
+	}while (choice != QUIT );
+    printf("Finishing the program.\n");
+    system("PAUSE");
+    return 0;
+}
+
+/*********************************************************************
+ * clean()
+ *        Reads all characters from the input buffer until NEWLINE reached
+ *        Returns: none
+ * PRE: none
+ * POST: input stream is empty
+*/
+
+void clean ()
+{
+     char dummy;
+     do
+     {
+         scanf("%c",&dummy); /*read a single char*/
+     } while(dummy != '\n'); /*if it was the NEWLINE we are done*/
+}
+
+
+/*********************************************************************
+ * GetTestChoice()
+ *		Displays a menu of all the functions tested in this test driver.
+ *		Returns a number indicating user's choice for function to test.
+ * PRE : none
+ * POST: the user has been prompted to select a function AND
+ *		 an integer representing the user's choice is returned.
+ * NOTE: no data validation performed
+ *********************************************************************/
+int GetTestChoice()
+{
+	int choice;
+
+	printf("\n\n Enter the number of the function you want to test:\n");
+
+	printf("%d: Quit the test driver program.\n", QUIT);
+	printf("%d: Test InitializeDeck(int[])\n", INITIALIZE_DECK);
+
+
+	/* step (4) ADD: a printf statement for each new function you want to add to test driver to test.
+			         The CONSTANT_NAME must be one of the constants declared at the top.
+    */
+
+
+
+
+
+
+
+
+
+	scanf("%i", &choice);
+	clean(); /* empty the input buffer */
+	printf("\n\n");
+
+	return choice;
+}
+
+
+
+
+
+
+
+
